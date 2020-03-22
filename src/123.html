@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt('vvedi',);
+        let resString;
+        let numbers={
+            zero: 0,
+            0: 'zero',
+            1: 'one',
+            2: 'two',
+            3: 'three',
+            4: 'four',
+            5: 'five',
+            6: 'six',
+            7: 'seven',
+            8: 'eight',
+            9: 'nine',
+            10: 'ten',
+            11: 'eleven',
+            12: 'twelve',
+            13: 'thirteen',
+            14: 'fourteen',
+            15: 'fifteen',
+            16: 'sixteen',
+            17: 'seventeen',
+            18: 'eighteen',
+            19: 'nineteen',
+            20: 'twenty',
+            30: 'thirty',
+            40: 'forty',
+            50: 'fifty',
+            60: 'sixty',
+            70: 'seventy',
+            80: 'eighty',
+            90: 'ninety',
+            100: 'hundred'
+        };
+        if(number>=0 && number<=20){
+            alert(numbers[`${number}`]);
+        }
+        if(number>20 && number<30){
+            alert(numbers[20]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>30 && number<40){
+            alert(numbers[30]+' '+numbers[`${number[1]}`]);
+        }if(number>40 && number<50){
+            alert(numbers[40]+' '+numbers[`${number[1]}`]);
+        }if(number>50 && number<60){
+            alert(numbers[50]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>60 && number<70){
+            alert(numbers[60]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>70 && number<80){
+            alert(numbers[70]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>80 && number<90){
+            alert(numbers[80]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>90 && number<100){
+            alert(numbers[90]+' '+numbers[`${number[1]}`]);
+        }
+        if(number>100 && number<120) {
+            if (number[1] === '0') {
+                alert(numbers[`${number[0]}`] + ' ' + numbers[100] + ' ' + numbers[`${number[2]}`])
+            } else {
+                alert(numbers[`${number[0]}`] + ' ' + numbers[100] + ' ' + numbers[`${number.slice(1, 3)}`]);
+            }
+        }
+        if(number>120) {
+            if(number[1]+number[2]==='00'){
+                alert(numbers[`${number[0]}`]+' '+numbers[100])
+            }
+            if (number[2] === '0' && number[1]!=='0') {
+                alert(numbers[`${number[0]}`] + ' ' + numbers[100] + ' ' + numbers[`${number[1]}` + '0'])
+            }
+            if (number[2]!== '0' && number[1]==='0') {
+                alert(numbers[`${number[0]}`] + ' ' + numbers[100] + ' ' + numbers[`${number[2]}`])
+            }
+        }
+        if(number.length>=3 && number[1]!=='0' && number[2]!=='0') {
+           alert( numbers[`${number[0]}`] + ' ' + numbers[100] + ' ' + numbers[`${number[1]}` + '0'] + ' ' + numbers[`${number[2]}`]);
+        }
+</script>
+</body>
+</html>
